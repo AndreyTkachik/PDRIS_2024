@@ -1,0 +1,7 @@
+---
+- name: deploy spring boot
+  hosts: spring_app
+  become: yes
+  tasks:
+    - name: deploy
+      command: "java -jar /app.jar"

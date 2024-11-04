@@ -1,0 +1,30 @@
+services:
+  ansible:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ansible
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - ./ansible:/ansible
+    command: sleep infinity
+    environment:
+      - ANSIBLE_HOST_KEY_CHECKING=False
+    networks:
+      - app_net
+        
+    
+  spring_boot:
+    build:
+      context: .
+      dockerfile: Dockerfile.spring
+    container_name: spring_boot
+    ports:
+      - "8080:8080"
+    command: sleep infinity
+    networks:
+      - app_net
+
+
+networks:
+  app_net:

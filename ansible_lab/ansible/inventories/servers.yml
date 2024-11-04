@@ -1,0 +1,1 @@
+spring_app ansible_host=172.25.0.3 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/spring_boot_app
