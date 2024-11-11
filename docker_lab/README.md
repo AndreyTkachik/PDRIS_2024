@@ -1,0 +1,1 @@
+Запсукается при помощи docker-compose up -d
