@@ -1,0 +1,56 @@
+2024.11.17 20:12:35 INFO  es[][o.e.n.NativeAccess] Using [jna] native provider and native methods for [Linux]
+2024.11.17 20:12:35 INFO  es[][o.e.n.Node] version[8.14.1], pid[152], build[tar/93a57a1a76f556d8aee6a90d1a95b06187501310/2024-06-10T23:35:17.114581191Z], OS[Linux/5.15.146.1-microsoft-standard-WSL2/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.13/17.0.13+11]
+2024.11.17 20:12:35 INFO  es[][o.e.n.Node] JVM home [/opt/java/openjdk], using bundled JDK [false]
+2024.11.17 20:12:35 INFO  es[][o.e.n.Node] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=org.elasticsearch.preallocate, --add-opens=org.apache.lucene.core/org.apache.lucene.store=org.elasticsearch.vec, -XX:ReplayDataFile=logs/replay_pid%p.log, -Djava.library.path=/opt/sonarqube/elasticsearch/lib/platform/linux-x64:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, -Djna.library.path=/opt/sonarqube/elasticsearch/lib/platform/linux-x64:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, -Des.distribution.type=tar, -XX:+UseG1GC, -Djava.io.tmpdir=/opt/sonarqube/temp, -XX:ErrorFile=/opt/sonarqube/logs/es_hs_err_pid%p.log, -Xlog:disable, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djna.tmpdir=/opt/sonarqube/temp, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=COMPAT, -Des.enforce.bootstrap.checks=true, -Xmx512m, -Xms512m, -XX:MaxDirectMemorySize=256m, -XX:+HeapDumpOnOutOfMemoryError, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, --module-path=/opt/sonarqube/elasticsearch/lib, --add-modules=jdk.net, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+2024.11.17 20:12:35 INFO  es[][o.e.n.Node] Default Locale [en_US]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [rest-root]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-core]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-redact]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-security]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-apm-data]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [old-lucene-versions]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [counted-keyword]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [x-pack-inference]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [health-shards-availability]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [aggregations]
+2024.11.17 20:12:36 INFO  es[][o.e.p.PluginsService] loaded module [apm]
+2024.11.17 20:12:37 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/opt/sonarqube/data (C:\)]], net usable_space [13.4gb], net total_space [162.2gb], types [9p]
+2024.11.17 20:12:37 INFO  es[][o.e.e.NodeEnvironment] heap size [512mb], compressed ordinary object pointers [true]
+2024.11.17 20:12:37 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [LRV3O2SZR2uhI0dMYzRN3A], cluster name [sonarqube], roles [master, remote_cluster_client, data, data_cold, ingest, data_frozen, ml, data_hot, transform, data_content, data_warm]
+2024.11.17 20:12:39 INFO  es[][o.e.f.FeatureService] Registered local node features [desired_node.version_deprecated, features_supported, health.extended_repository_indicator, knn_retriever_supported, license-trial-independent-version, retrievers_supported, standard_retriever_supported, usage.data_tiers.precalculate_stats]
+2024.11.17 20:12:39 INFO  es[][o.e.x.s.Security] Security is disabled
+2024.11.17 20:12:39 INFO  es[][o.e.x.a.APMPlugin] APM ingest plugin is disabled
+2024.11.17 20:12:39 INFO  es[][o.e.t.a.APM] Sending apm metrics is disabled
+2024.11.17 20:12:39 INFO  es[][o.e.t.a.APM] Sending apm tracing is disabled
+2024.11.17 20:12:40 INFO  es[][o.e.t.n.NettyAllocator] creating NettyAllocator with the following configs: [name=unpooled, suggested_max_allocation_size=1mb, factors={es.unsafe.use_unpooled_allocator=null, g1gc_enabled=true, g1gc_region_size=4mb, heap_size=512mb}]
+2024.11.17 20:12:40 INFO  es[][o.e.i.r.RecoverySettings] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+2024.11.17 20:12:40 INFO  es[][o.e.d.DiscoveryModule] using discovery type [single-node] and seed hosts providers [settings]
+2024.11.17 20:12:40 INFO  es[][o.e.n.Node] initialized
+2024.11.17 20:12:41 INFO  es[][o.e.n.Node] starting ...
+2024.11.17 20:12:41 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:43707}, bound_addresses {127.0.0.1:43707}
+2024.11.17 20:12:41 INFO  es[][o.e.b.BootstrapChecks] explicitly enforcing bootstrap checks
+2024.11.17 20:12:41 INFO  es[][o.e.c.c.ClusterBootstrapService] this node has not joined a bootstrapped cluster yet; [cluster.initial_master_nodes] is set to [sonarqube]
+2024.11.17 20:12:41 INFO  es[][o.e.c.c.Coordinator] setting initial configuration to VotingConfiguration{LRV3O2SZR2uhI0dMYzRN3A}
+2024.11.17 20:12:41 INFO  es[][o.e.c.s.MasterService] elected-as-master ([1] nodes joined in term 1)[_FINISH_ELECTION_, {sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}{ZyhK6JjsQIKuVpKJVWu1gQ}{sonarqube}{127.0.0.1}{127.0.0.1:43707}{cdfhilmrstw}{8.14.1}{7000099-8505000} completing election], term: 1, version: 1, delta: master node changed {previous [], current [{sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}{ZyhK6JjsQIKuVpKJVWu1gQ}{sonarqube}{127.0.0.1}{127.0.0.1:43707}{cdfhilmrstw}{8.14.1}{7000099-8505000}]}
+2024.11.17 20:12:42 INFO  es[][o.e.c.c.CoordinationState] cluster UUID set to [4qEy1zK6TzqikQ_Ur4Zjlg]
+2024.11.17 20:12:42 INFO  es[][o.e.c.s.ClusterApplierService] master node changed {previous [], current [{sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}{ZyhK6JjsQIKuVpKJVWu1gQ}{sonarqube}{127.0.0.1}{127.0.0.1:43707}{cdfhilmrstw}{8.14.1}{7000099-8505000}]}, term: 1, version: 1, reason: Publication{term=1, version=1}
+2024.11.17 20:12:42 INFO  es[][o.e.c.f.AbstractFileWatchingService] starting file watcher ...
+2024.11.17 20:12:42 INFO  es[][o.e.c.f.AbstractFileWatchingService] file settings service up and running [tid=41]
+2024.11.17 20:12:42 INFO  es[][o.e.r.s.FileSettingsService] setting file [/opt/sonarqube/temp/conf/es/operator/settings.json] not found, initializing [file_settings] as empty
+2024.11.17 20:12:42 INFO  es[][o.e.h.AbstractHttpServerTransport] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2024.11.17 20:12:42 INFO  es[][o.e.c.c.NodeJoinExecutor] node-join: [{sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}{ZyhK6JjsQIKuVpKJVWu1gQ}{sonarqube}{127.0.0.1}{127.0.0.1:43707}{cdfhilmrstw}{8.14.1}{7000099-8505000}] with reason [completing election]
+2024.11.17 20:12:42 INFO  es[][o.e.n.Node] started {sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}{ZyhK6JjsQIKuVpKJVWu1gQ}{sonarqube}{127.0.0.1}{127.0.0.1:43707}{cdfhilmrstw}{8.14.1}{7000099-8505000}{xpack.installed=true, rack_id=sonarqube}
+2024.11.17 20:12:42 INFO  es[][o.e.g.GatewayService] recovered [0] indices into cluster_state
+2024.11.17 20:12:42 INFO  es[][o.e.l.ClusterStateLicenseService] license [0cc337fb-abda-49b5-8373-fbf84c9b3471] mode [basic] - valid
+2024.11.17 20:12:42 INFO  es[][o.e.h.n.s.HealthNodeTaskExecutor] Node [{sonarqube}{LRV3O2SZR2uhI0dMYzRN3A}] is selected as the current health node.
+2024.11.17 20:12:45 INFO  es[][o.e.n.Node] stopping ...
+2024.11.17 20:12:45 INFO  es[][o.e.c.f.AbstractFileWatchingService] shutting down watcher thread
+2024.11.17 20:12:45 INFO  es[][o.e.c.f.AbstractFileWatchingService] watcher service stopped
+2024.11.17 20:12:45 INFO  es[][o.e.n.Node] stopped
+2024.11.17 20:12:45 INFO  es[][o.e.n.Node] closing ...
+2024.11.17 20:12:45 INFO  es[][o.e.n.Node] closed
