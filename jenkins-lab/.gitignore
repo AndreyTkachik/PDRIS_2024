@@ -1,0 +1,8 @@
+jenkins
+jenkins_data
+jenkins-docker-certs
+postgersql
+postgresql_data
+sonarqube_data
+sonarqube_extensions
+sonarqube_logs

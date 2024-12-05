@@ -1,0 +1,64 @@
+pipeline {
+    agent any
+    tools {
+        maven 'M3'
+    }
+    stages {
+        stage('Prepare git config') {
+            steps {
+                sh 'git config --global --add safe.directory "*"'
+            }
+        }
+		
+        stage('Clone app') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/AndreyTkachik/jenkins_lab_task4.git'
+            }    
+        }
+		
+        stage('Build with tests') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Allure report') {
+            steps {
+                allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'target/allure-results']]
+                    ])
+            }
+        }
+		
+        stage('SonarQube check') {
+            steps {
+                sh 'mvn clean jacoco:prepare-agent install'
+                script {
+                    def scannerHome = tool 'Sonar';
+                    withSonarQubeEnv('Sonar') {
+                        sh "${scannerHome}/bin/sonar-scanner\
+                        -Dsonar.projectKey=pipeline \
+                        -Dsonar.sources=src/main/java/ \
+                        -Dsonar.tests=src/test/java/ \
+                        -Dsonar.java.binaries=target/classes \
+                        -Dsonar.junit.reportPaths=target/surefire-reports \
+                        -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml"
+                    }
+                }
+            }
+        }
+		
+        stage('Setting docker container with app') {
+            steps {
+                sh 'docker image build -t car-garage:latest .'
+                sh 'docker run car-garage:latest'
+            }
+        }
+    }
+    
+}
