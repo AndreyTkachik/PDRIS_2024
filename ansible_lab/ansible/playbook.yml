@@ -1,0 +1,24 @@
+---
+- name: deploy spring boot
+  hosts: spring_app
+  become: yes
+  
+  tasks:
+  
+  - name: apdate apt
+    command: "apt update"
+    
+  - name: get java
+    command: "apt install -y openjdk-17-jdk"
+    
+  - name: get git
+    command: "apt install -y git"
+    
+  - name: clone app
+    command: "git clone https://github.com/AndreyTkachik/ansible_task_lab2.git"
+    
+  - name: got to app dir
+    command: "cd ansible_task_lab2"
+    
+  - name: deploy
+    command: "java -jar /app.jar"
